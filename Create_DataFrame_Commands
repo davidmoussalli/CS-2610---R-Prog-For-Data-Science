@@ -1,0 +1,38 @@
+set.seed(111)
+nSubjects <- 50
+
+id <- list()
+# generate subject id's
+for(i in 1:nSubjects) {
+id[i] <- paste("subject", i, sep="")
+}
+
+# generate subject genders
+gender <- runif(nSubjects)
+for(i in 1:nSubjects) {
+if(gender[i] <0.5) {
+gender[i] <- "M"
+} else {
+gender[i] <- "F"
+}
+}
+
+# set mean temperatures for each time
+tempMean <- c(102.1, 102.0, 101.4, 100.3, 99.5, 99.2, 99.8, 98.6)
+
+# generate names for each time
+n <- list()
+for(i in 1:length(tempMean)) {
+n[i] <- paste("temp",i, sep="")
+}
+
+# make a matrix for the temps
+t <- matrix(nrow=nSubjects, ncol=length(tempMean))
+colnames(t) <- n
+
+# generate subjects temperatures
+for(i in 1:length(tempMean)) {
+t[,i] <- rnorm(nSubjects, tempMean[i], 0.2)
+}
+
+df <- data.frame(I(id), gender, t) #USE OF 'I()' IS KEY HERE...
