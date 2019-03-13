@@ -1,0 +1,107 @@
+
+testAll <- function(){
+    test1()
+    test2()
+    test3()
+    test4()
+}
+
+
+test1 <- function(){ #Test column names
+   
+    if(names(df)[1] == "id"){
+        print("success1")
+    } else {
+        print("failure1")
+    }
+    
+    if(names(df)[2] == "gender"){
+        print("success2")
+    } else {
+        print("failure2")
+    }
+    
+    #continue testing column names...
+    
+    if(names(df)[3] == "temp1"){
+        print("success3")
+    } else {
+        print("failure3")
+    }
+
+
+    if(names(df)[4] == "temp2"){
+        print("success4")
+    } else {
+        print("failure4")
+    }
+
+    
+    if(names(df)[5] == "temp3"){
+        print("success5")
+    } else {
+        print("failure5")
+    }
+
+    
+    if(names(df)[6] == "temp4"){
+        print("success6")
+    } else {
+        print("failure6")
+    }
+
+    
+    if(names(df)[7] == "temp5"){
+        print("success7")
+    } else {
+        print("failure7")
+    }
+
+    
+    if(names(df)[8] == "temp6"){
+        print("success8")
+    } else {
+        print("failure8")
+    }
+
+    
+    if(names(df)[9] == "temp7"){
+        print("success9")
+    } else {
+        print("failure9")
+    }
+
+    
+    if(names(df)[10] == "temp8"){
+        print("success10")
+    } else {
+        print("failure10")
+    }
+    
+} #End of test1()
+
+
+test2 <- function(){ #Test nrows and ncols
+    if(ncol(df) == 10){
+        print("success11")
+    } else {
+        print("failure11")
+    }
+
+    if(nrow(df) == 50){
+        print("success12")
+    } else {
+        print("failure12")
+    }
+
+} #End of test2()
+
+
+test3 <- function(){ #Test column types
+    #
+}
+
+
+test4 <- function(){ #Test subject names?
+    #Not sure if that is what we are testing here...
+}
