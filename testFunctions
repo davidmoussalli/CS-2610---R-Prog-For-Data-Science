@@ -1,4 +1,8 @@
 
+# Names: David Moussalli and Honglin Wei
+# CS 2610 - R Prog for Data Science
+
+# dataframe is named "df"
 testAll <- function(){
     test1()
     test2()
@@ -8,17 +12,17 @@ testAll <- function(){
 
 
 test1 <- function(){ #Test column names
-   
+    print("============= Testing column names... ================")
     if(names(df)[1] == "id"){
         print("success1")
     } else {
-        print("failure1")
+        print("     failure1")
     }
     
     if(names(df)[2] == "gender"){
         print("success2")
     } else {
-        print("failure2")
+        print("     failure2")
     }
     
     #continue testing column names...
@@ -26,82 +30,152 @@ test1 <- function(){ #Test column names
     if(names(df)[3] == "temp1"){
         print("success3")
     } else {
-        print("failure3")
+        print("     failure3")
     }
 
 
     if(names(df)[4] == "temp2"){
         print("success4")
     } else {
-        print("failure4")
+        print("     failure4")
     }
 
     
     if(names(df)[5] == "temp3"){
         print("success5")
     } else {
-        print("failure5")
+        print("     failure5")
     }
 
     
     if(names(df)[6] == "temp4"){
         print("success6")
     } else {
-        print("failure6")
+        print("     failure6")
     }
 
     
     if(names(df)[7] == "temp5"){
         print("success7")
     } else {
-        print("failure7")
+        print("     failure7")
     }
 
     
     if(names(df)[8] == "temp6"){
         print("success8")
     } else {
-        print("failure8")
+        print("     failure8")
     }
 
     
     if(names(df)[9] == "temp7"){
         print("success9")
     } else {
-        print("failure9")
+        print("     failure9")
     }
 
     
     if(names(df)[10] == "temp8"){
         print("success10")
     } else {
-        print("failure10")
+        print("     failure10")
     }
     
 } #End of test1()
 
 
 test2 <- function(){ #Test nrows and ncols
+    print("============= Testing number of rows and columns... ================")
     if(ncol(df) == 10){
         print("success11")
     } else {
-        print("failure11")
+        print("     failure11")
     }
 
     if(nrow(df) == 50){
         print("success12")
     } else {
-        print("failure12")
+        print("     failure12")
     }
 
 } #End of test2()
 
 
 test3 <- function(){ #Test column types
-    #
+    print("============= Testing column types... ================")
+    if((typeof(df[5,1]) == "character")){
+        print("success13")
+    } else {
+        print("     failure13")
+    }
+
+
+    if((typeof(df[5,2]) == "integer")){
+        print("success14")
+    } else {
+        print("     failure14")
+    }
+
+
+    if((typeof(df[5,3]) == "double")){
+        print("success15")
+    } else {
+        print("     failure15")
+    }
+
+
+    if((typeof(df[5,4]) == "double")){
+        print("success16")
+    } else {
+        print("     failure16")
+    }
+
+
+    if((typeof(df[5,5]) == "double")){
+        print("success17")
+    } else {
+        print("     failure17")
+    }
+
+
+    if((typeof(df[5,6]) == "double")){
+        print("success18")
+    } else {
+        print("     failure18")
+    }
+
+
+    if((typeof(df[5,7]) == "double")){
+        print("success19")
+    } else {
+        print("     failure19")
+    }
+
+
+    if((typeof(df[5,8]) == "double")){
+        print("success20")
+    } else {
+        print("     failure20")
+    }
+
+
+    if((typeof(df[5,9]) == "double")){
+        print("success21")
+    } else {
+        print("     failure21")
+    }
+
+
+    if((typeof(df[5,10]) == "double")){
+        print("success22")
+    } else {
+        print("     failure22")
+    }
 }
 
 
 test4 <- function(){ #Test subject names?
-    #Not sure if that is what we are testing here...
+    print("============= Testing subject names... ================")
+
 }
