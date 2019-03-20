@@ -1,0 +1,9 @@
+> generate_graph <- function(n){
++     x<- runif(n, 0 , 10)
++     y<- 3.2*x
++     error <- rnorm(n, mean = 0, sd=2)
++     plot(x,y+error)
++     lm(y+error ~ x)
++    abline(lm(y+error ~x))   
++ }
+> generate_graph(50)
