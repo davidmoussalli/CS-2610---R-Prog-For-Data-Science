@@ -36,15 +36,15 @@
 qsolve <- function(a, b, c) {
 	#Test input values:
     if(is.finite(a)!=TRUE || is.finite(b)!=TRUE || is.finite(c)!=TRUE){
-        print("a, b, and c must be finite real numbers.")
+#        print("a, b, and c must be finite real numbers.")
         return(NA)
     }
     if(a==0){
-        print("a cannot equal zero")
+#        print("a cannot equal zero")
         return(NA)
     }
     if((b^2) == Inf){
-        print("b^2 must be smaller than Inf")
+#        print("b^2 must be smaller than Inf")
         return(NA)
     }
 
@@ -57,7 +57,7 @@ qsolve <- function(a, b, c) {
     x2 <- (-b + sqrt(disc))/(2*a)
 
     if(x1>x2){# Not sure if this test is necessary...
-    	print("error...x1 should not be greater than x2...")
+#    	print("error...x1 should not be greater than x2...")
     	return(NA)
     }
     return(c(x1, x2))# Return x1 and x2 values
