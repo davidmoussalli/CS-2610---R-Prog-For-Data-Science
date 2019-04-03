@@ -23,18 +23,42 @@
 #    of internal overflows and 
 # 2) will provide more precision in some cases.
 #
+# qsolve <- function(a, b, c) {
+#   disc <- b^2 - 4*a*c
+#   if( disc < 0) {
+#     return(NULL)
+#   }
+#   x1 <- (-b - sqrt(disc))/(2*a)
+#   x2 <- (-b + sqrt(disc))/(2*a)
+#   return(c(x1, x2))
+# }
+
 qsolve <- function(a, b, c) {
-    disc <- b^2 - 4*a*c
-    if(a==0)
-    stop("Leading term cannot be zero")
-    if( disc < 0) {
-        return(NULL)
+	#Test input values:
+    if(is.finite(a)!=TRUE || is.finite(b)!=TRUE || is.finite(c)!=TRUE){
+        # print("a, b, and c must be finite real numbers.")
+        return(NA)
     }
-    else if(disc == 0 ){
-        return (c( -b/(2*a)))
+    if(a==0){
+        # print("a cannot equal zero")
+        return(NA)
+    }
+    if((b^2) == Inf){
+        # print("b^2 must be smaller than Inf")
+        return(NA)
+    }
+
+    #Perform quadratic function
+    disc <- b^2 - 4*a*c
+    if( disc < 0) {
+        return(NA)
     }
     x1 <- (-b - sqrt(disc))/(2*a)
     x2 <- (-b + sqrt(disc))/(2*a)
-    return(c(x1, x2))
-}
- 
+
+    if(x1>x2){# Not sure if this test is necessary...
+    	# print("error...x1 should not be greater than x2...")
+    	return(NA)
+    }
+    return(c(x1, x2))# Return x1 and x2 values
+}# End qsolve()
